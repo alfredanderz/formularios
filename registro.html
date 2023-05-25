@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Registro</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body text="white" bgcolor="253f4b">
+    <center>
+        <h1 id="mensaje"></h1>
+        <h2 id="Apellidos"></h2>
+        <h3 id="cumple"></h3>
+        <h4><a href="mailto:Correo" id="Correo" style="color: aqua;"></a></h4>
+        <h4><a href="tel:Telefono" id="Telefono" style="color: aqua;"></a></h4>
+    
+
+    <script>
+        getParameter = (key) => {
+
+            address = window.location.search; // url de la ventana actual
+
+            // Objeto de tipo URLSearchParams
+            parameterList = new URLSearchParams(address);
+
+            // Regresa el valor del parámetro "key" return parameterList.get(key)
+            return parameterList.get(key);
+        }
+
+        console.log(getParameter("Nombre"));
+        var nombre = getParameter("Nombre");
+
+        if (nombre != null) {
+            document.getElementById("mensaje").innerHTML = "hola " + nombre;
+        }
+
+        console.log(getParameter("Apellidos"));
+        var Apellidos = getParameter("Apellidos");
+
+        if (Apellidos != null) {
+            document.getElementById("Apellidos").innerHTML = "Apellidos : " + " "+ Apellidos;
+        }
+
+        console.log(getParameter("Correo"));
+        var Correo = getParameter("Correo");
+        if (Correo != null) {
+            document.getElementById("Correo").innerHTML = "correo: " +" "+ Correo;
+        }
+
+        console.log(getParameter("Telefono"));
+        var Telefono = getParameter("Telefono");
+        if (Telefono != null) {
+            document.getElementById("Telefono").innerHTML = "telefono: "+"  "+Telefono;
+        }
+
+
+
+
+        
+
+
+   
+
+
+    </script>
+    <h6>ALFREDO HERNANDEZ</h6>
+    <h3>dsm</h3>
+    <h3>3b</h3>
+
+
+
+
+
+</center>
+</body>
+
+</html>
+
+</html>
